@@ -1,0 +1,97 @@
+//BEGIN: Audit Calendar Style
+.fc {	
+	.fc-button-group {
+		>.fc-button {
+			background-color:#b4954f;
+		}
+		.fc-button-primary {
+			background-color: #b4954f;
+			&:hover {
+				background-color: #8a7136;
+			}
+			&:disabled{ background: #edddbb !important;}
+		}		
+	}
+}
+#calendar{
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	.fc-header-toolbar{
+		background-color: $color-calendar-header-bg;
+		padding: 0.2rem 0.5rem;
+		margin: 0;
+		h2{
+			font-size: 1.1rem;
+			color: $color-cal-arrow-color;
+			font-weight: bold;
+		}
+	}
+	.fc-col-header{
+		thead{
+			background-color: #f4f0ed;
+			th{
+				a{
+					color: $color-black;
+				}				
+			}
+		}
+	}
+	
+	
+	
+	
+	// .fc-col-header,.fc-scrollgrid-sync-table,.fc-daygrid-body {
+	// 	width: 100% !important;
+	// 	min-width: initial !important;
+	// }
+	// .fc-col-header-cell,fc-day{
+	// 	max-width: 2rem;
+	// 	width: 1rem;
+	// }
+}
+.fc .fc-more-popover .fc-popover-body{
+	max-height: 20rem;
+	overflow-y: auto;
+}
+.fc .fc-daygrid-more-link{
+	background-color: #bda265;
+	color: #fff;
+}
+.fc .fc-daygrid-day-number{
+	font-size: 1rem;
+	font-family: $font-segoe-bold;
+	color: $color-english-blue;
+}
+.calendar-container {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	header {
+		background-color: $color-calendar-header-bg;
+		padding: 0.2rem;
+		h2{
+			font-size: 1.1rem;
+			&.month{
+				color:$color-cal-arrow-color;
+				font-weight: bold;
+				.year{
+					font-size: 0.8rem;
+					font-weight: 400;
+					margin-top: 0.3rem;
+				}
+			}
+		}
+		a.simple-calendar-btn{
+			color:$color-cal-arrow-color ;
+			border-color: $color-cal-arrow-color;
+			top: 6px;
+			&:hover{
+				background-color: $color-cal-arrow-color;
+			}
+		}
+		a.btn-prev {			
+			left: 8px;
+		}
+		a.btn-next {		
+			right: 8px;
+		}
+	}
+}
+//END: Audit Calendar Style

@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CaseTransfer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CaseTransfer.styles.css" asp-append-version="true" />
+
+    <!-- Start CaseTransfer Plugins-->
+    <link href="~/css/1style.css" rel="stylesheet" />
+    <link href="~/css/4blog.css" rel="stylesheet" />
+    <link href="~/css/tresponsive/responsive.css" rel="stylesheet" />
+    <link href="~/css/3homepage.css" rel="stylesheet" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/green.css" title="green" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/blue.css" title="blue" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/orange.css" title="orange" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/lilac.css" title="lilac" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/yellow.css" title="yellow" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/teal.css" title="teal" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/pink.css" title="pink" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/red.css" title="red" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/khaki.css" title="khaki" />
+    <!-- End -->
+    @*<!-- BEGIN: Custom APS theme style -->
+    <link href="~/assets/css/aps.theme.min.css" rel="stylesheet" asp-append-version="true" />
+    <!-- END: Custom APS theme style -->*@
+    <script src="~/assets/js/jquery.min.js"></script>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        h5 {
+            font-weight: bold;
+        }
+        body{
+            padding-bottom: 0px !important;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- DEMO PANEL
+           ================================================== -->
+    <button id="btnStyle" name="btnStyle" type="button" class="optionsbutton">
+        <img src="~/images/options.png" alt="Theme" />
+    </button>
+    <div id="skinoptions" style="position: fixed; top: 289px; right: 0px; z-index: 9999;
+		display: none;">
+        <a href="#" onclick="setActiveStyleSheet('green'); return false;">
+            <div class="optionscolor" style="background-color: #8ea145;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('blue'); return false;">
+            <div class="optionscolor" style="background-color: #2284a1;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('yellow'); return false;">
+            <div class="optionscolor" style="background-color: #e0aa32;">
+            </div>
+        </a>
+        <div class="clear">
+        </div>
+        <a href="#" onclick="setActiveStyleSheet('lilac'); return false;">
+            <div class="optionscolor" style="background-color: #9e7ead;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('orange'); return false;">
+            <div class="optionscolor" style="background-color: #da6f29;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('pink'); return false;">
+            <div class="optionscolor" style="background-color: #8a4466;">
+            </div>
+        </a>
+        <div class="clear">
+        </div>
+        <a href="#" onclick="setActiveStyleSheet('teal'); return false;">
+            <div class="optionscolor" style="background-color: #33877d;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('red'); return false;">
+            <div class="optionscolor" style="background-color: #f2615c;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('khaki'); return false;">
+            <div class="optionscolor" style="background-color: #a0a774;">
+            </div>
+        </a>
+    </div>
+
+
+    <!-- HIDDEN PANEL
+       ================================================== -->
+    <div id="panel1" clientidmode="Static">
+        <p class="slide"></p>
+    </div>
+
+    <!-- HEADER
+    ================================================== -->
+    <div class="row">
+        <div class="col-md-4 imgresponsive center">
+            <img src="~/ctimages/dfwac.gif" alt="dfwac logo" class="img-fluid" />
+        </div>
+        <div class="six columns noleftmarg" id="divmenu">
+            <nav id="nav-wrap">
+                <ul class="nav-bar sf-menu">
+
+                    <li class="current">
+                        <a id="mnuDash" href="~/admin/admin_dashboard/">
+                            <label ID="lblDashboard" ToolTip="Dashboard" Text="Dashboard" meta:resourcekey="mnuDashBoardResource">Dashboard</label>
+                        </a>
+                    </li>
+                    <li id="liAdministration">
+                        <a id="mnuAdministration" onclick="return false;" href="#">
+                            <label ID="lblAdministration" ToolTip="Administration" Text="Administration" meta:resourcekey="mnuAdministrationResource">Administration</label>
+                        </a>
+                        <ul>
+                            <li>
+                                <a id="mnuAgency" href="~/admin/agency">
+                                    <label ID="lblAgency" Text="Agency" ToolTip="Agency" meta:resourcekey="mnuAgencyResource">Agency</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuUsers" href="~/admin/users">
+                                    <label ID="lblUsers" Text="Users" ToolTip="Users" meta:resourcekey="mnuUsersResource">Users</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuUserRights" href="~/userrights">
+                                    <label ID="lblUserRights" Text="User Rights" ToolTip="User Rights" meta:resourcekey="mnuUsersRightsResource">User Rights</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a id="mnuComment" href="~/admin/Comment">
+                                    <label ID="lblComments" Text="Comments" ToolTip="Comments" meta:resourcekey="mnuCommentsResource">Comments</label>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li id="liTools">
+                        <a id="mnuTools" href="#" onclick="return false;">
+                            <label ID="lblTools" ToolTip="Tools" Text="Tools" meta:resourcekey="mnuToolsResource">Tools</label>
+                        </a>
+                        <ul>
+                            <li>
+                                <a id="mnuChangePassword" href="~/change_passoword">
+                                    <label ID="lblChangePassword" Text="Change Password" ToolTip="Change Password" meta:resourcekey="mnuchangepasswordResource">Change Password</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuAuditHistory" href="~/audithistory">
+                                    <label ID="lblAuditHistory" Text="Audit History" ToolTip="Audit History" meta:resourcekey="mnuaudithistoryResource">Audit History</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuSupportData" href="~/admin/support_data">
+                                    <label ID="lblSupportData" Text="Support Data" ToolTip="Support Data" meta:resourcekey="mnusupportdataResource">Support Data</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="liReports">
+                        <a id="mnuReports" href="#" onclick="return false;">
+                            <label ID="lblReports" ToolTip="Reports" Text="Reports" meta:resourcekey="mnuReportsResource">Reports</label>
+                        </a>
+                        <ul>
+                            <li>
+                                <a id="mnuNoOfCases" href="~/reports/totalcases/Default.aspx">
+                                    <label ID="lblnumberofCases" Text="Number Of Cases" ToolTip="Number Of Cases" meta:resourcekey="mnuNoofCasesResource">Number Of Cases</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuCaseCategoryandSeverity" href="~/reports/casecategoryandseverity/default.aspx">
+                                    <label ID="lblcasecategory" Text="Case Category and Severity" ToolTip="Case Category and Severity" meta:resourcekey="mnuCaseCategoryResource">Case Category and Severity</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuTransferredin" href="~/reports/transferin/Default.aspx">
+                                    <label ID="lblTransferredin" Text="Transferred in" ToolTip="Transferred in" meta:resourcekey="mnuCaseCategoryResource">Transferred in</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuTransferredto" href="~/reports/TransferredTo/Default.aspx">
+                                    <label ID="lblTransferredto" Text="Transferred to" ToolTip="Transferred to" meta:resourcekey="mnuCaseCategoryResource">Transferred to</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="mnuServiceResponsetime" href="~/reports/ServiceResponseTime/Default.aspx">
+                                    <label ID="lblserviceresponcetime" Text="Service Response Time" ToolTip="Service Response Time" meta:resourcekey="mnuServiceResponseTimeResource">Service Response Time</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-2 imgresponsive">
+            <div class="columns centered">
+                <a href="#" id="lnkAgencyLogo" name="lnkLogout" title="Case Transfer">
+                    <img id="imgagencylogo" runat="server" alt="Agency Logo" src="" title="" style="max-height: 90px"
+                         class="twelve" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- SUBHEADER
+    ================================================== -->
+    <div id="subheader">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center">
+                    “A place without women is a place without spirit” - Mohammed bin Rashid Al Maktoum
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LanguageSelection
+    ================================================== -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="avatar pop_header">
+                <img src="~/images/welcomeuser.jpg" class="pics" alt="info" />
+            </div>
+            <div class="infotext">
+                <label for="Label1" class="font-weight-bold">Welcome</label>
+                <label style="display: inline;">
+                    @*<%=Session[Common.Text.SessionLoggedName]%>*@
+                </label>
+                @*<span class="highlightText" style="font-family: BitterItalic; font-size: 12px;">[<Label ID="lblRolename" Text="Role"></Label>]</span>*@
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="infotext">
+                <div class="row">
+                    <div class="col-md-4 margintop7">
+                        <label for="ddlRole" class="center">Switch to</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select id="ddlRole" class="button dropdown w-100" title="Select Role">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="infotext">
+                <div class="row">
+                    <div class="col-md-4 margintop7">
+                        <label for="rdoLanguage"></label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mt-2" type="radio" name="rdoLanguage" id="rdoLanguage1" value="1" checked>
+                            <label class="form-check-label mt-2" for="rdoLanguage1">Arabic</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mt-2" type="radio" name="rdoLanguage" id="rdoLanguage2" value="2">
+                            <label class="form-check-label mt-2" for="rdoLanguage2">English</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">&nbsp;</div>
+
+    <!-- CONTENT
+    ================================================== -->
+    <div class="row languagedirection">
+        <div class="col-md-12 aligncenter">
+            <div class="centersectiontitle">
+                <h5>Associated Agency</h5>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+        &nbsp;
+    </div>
+
+    <div class="row">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="small">© DFWAC 2015. All Rights Reserved. | Web site powered by Management Concept Group</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="small floatright">
+                        Tel: 04-6060300 Fax: 04-2871177, Email: info@dfwac.ae,
+                        P.O. Box 97727 Dubai, United Arab Emirates</br> Helpline: 800111 SMS: 5111
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JAVASCRIPTS -->
+    <!-- Javascript files placed here for faster loading -->
+    <script src="~/scripts/foundation.js"></script>
+    <script src="~/scripts/foundation.min.js"></script>
+    <script src="~/scripts/scrolltotop.js"></script>
+    <script src="~/scripts/superfish.js"></script>
+    <script src="~/scripts/responsivemenu.js"></script>
+    <script src="~/scripts/casetransfer_validation.js"></script>
+    <script src="~/scripts/scrollablegridplugin.js"></script>
+    <script src="~/scripts/jquery.datetimepicker.js"></script>
+    <!-- End -->
+@*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)*@
+
+    <!-- BEGIN: Toaster Refrences -->
+    <a href="~/toster/toastr.css.map"></a>
+    <link href="~/toster/toastr.css" rel="stylesheet" />
+    <script src="~/assets/plugins/toastr/toastr.min.js" asp-append-version="true"></script>
+    <!-- END: Toaster Refrences -->
+    <!-- BEGIN: Custom APS theme Script -->
+    <script src="~/js/aps.theme.scripts.js" asp-append-version="true"></script>
+    <!-- END: Custom APS theme Script -->
+    <!-- BEGIN: MessageCatalog Script -->
+    <script src="~/js/messagecatalog.js"></script>
+    <!-- END: MessageCatalog  Script -->
+    <!-- END: Session Value Expired or Not Script -->
+</body>
+</html>

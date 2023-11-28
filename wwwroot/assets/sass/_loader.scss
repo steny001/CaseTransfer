@@ -1,0 +1,71 @@
+//BEGIN: Loader CSS
+.loader-panel{
+    top: 0;  
+    left: 0;  
+    position: fixed;  
+    opacity: 0.8;  
+    z-index: 10000000;  
+    background: Black;  
+    height: 100%;  
+    width: 100%;  
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+h4{
+    font-size: 1.5rem;
+    color: $color-white;
+    margin-top: 1rem;
+}
+
+.loading {
+    $colors: #ece4d3, #d9caa7, #c7af7b, #b4954f, #a17a23;
+    display: flex;
+  
+    .dot {
+      position: relative;
+      width: 2em;
+      height: 2em;
+      margin: 0.8em;
+      border-radius: 50%;
+  
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        animation: wave 2s ease-out infinite;
+      }
+  
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          background: nth($colors, $i);
+  
+          &::before {
+            animation-delay: $i * 0.2s;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes wave {
+    50%,
+    75% {
+      transform: scale(2.5);
+    }
+  
+    80%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+div.dataTables_processing>div:last-child>div{
+  background-color: #a17a23 !important;
+}
+//END: Loader CSS

@@ -1,0 +1,466 @@
+body {
+  background-color: #e8eff9;
+}
+body a {
+  color: #16417c !important;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+body a:hover, body a:focus {
+  color: #744ac8 !important;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.ftco-no-pt {
+  padding-top: 0;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+
+.heading-section {
+  font-size: 28px;
+  color: #000;
+}
+
+.img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.login-wrap {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+.login-wrap h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.login-wrap p {
+  color: #000;
+}
+.login-wrap .img {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
+
+.star-indicates {
+  text-align: right;
+  color: #000;
+}
+
+.star-indicates span {
+  color: red;
+}
+
+.form-group {
+  position: relative;
+}
+.form-group .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 48px;
+  background: transparent;
+  font-size: 18px;
+}
+.form-group .icon span {
+  color: #000;
+}
+.form-group label {
+  color: #666;
+  font-weight: 600;
+}
+.form-group span.required-star {
+  color: #dc3545;
+  margin-left: 0.3rem;
+}
+.form-group .select2-container--default .select2-selection--single {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-bottom: 1px solid #374d7c !important;
+  height: 48px;
+}
+.form-group .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 40px;
+}
+.form-group .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px;
+}
+
+.form-control {
+  height: 40px;
+  color: #374d7c !important;
+  font-size: 14px;
+  box-shadow: none;
+  border-radius: 0.25rem;
+  border: 1px solid #a1a4a7;
+  padding-left: 10px !important;
+  padding-right: 0;
+  letter-spacing: 1px;
+}
+.form-control:focus, .form-control:active, .form-control:focus-within {
+  outline: none !important;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.01);
+  border-color: #374d7c;
+}
+
+.text a {
+  text-transform: uppercase;
+}
+
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  margin-top: -4px;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap input:checked ~ .checkmark:after {
+  display: block;
+  content: "\f14a";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Style the checkmark/indicator */
+.checkbox-primary {
+  color: #374d7c;
+}
+.checkbox-primary input:checked ~ .checkmark:after {
+  color: #374d7c;
+}
+
+.btn {
+  cursor: pointer;
+  box-shadow: none !important;
+  font-size: 1rem;
+  border-radius: 1.1875rem;
+}
+.btn:hover, .btn:active, .btn:focus {
+  outline: none;
+}
+.btn.btn-primary {
+  background-image: linear-gradient(-180deg, #5d34af 0%, #1b284c 100%);
+  border: 0px solid #1b284c;
+  color: #fff !important;
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+  background-image: linear-gradient(-180deg, #744ac8 0%, #283760 100%);
+  border: 0px solid #1b284c;
+  color: #fff;
+}
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #374d7c;
+  background: transparent;
+  color: #374d7c;
+}
+.btn.btn-primary.btn-outline-primary:hover, .btn.btn-primary.btn-outline-primary:focus {
+  border: 1px solid transparent;
+  background: #374d7c;
+  color: #fff;
+}
+.btn.btn-primary i {
+  color: #fff !important;
+}
+
+.btn-primary.btn-login {
+  background-image: linear-gradient(-180deg, #5d34af 0%, #1b284c 100%);
+  border-radius: 25px;
+  border: 0px solid #1b284c;
+}
+.btn-primary.btn-login:hover, .btn-primary.btn-login:focus {
+  background-image: linear-gradient(-180deg, #744ac8 0%, #283760 100%);
+  border: 0px solid #1b284c;
+}
+
+.btn-light.btn-login-cancel, .btn-light {
+  background-image: linear-gradient(-180deg, #c2c2c2 0%, #949494 100%);
+  border-radius: 25px;
+  border: 0px solid #535353;
+  color: #fff !important;
+}
+.btn-light.btn-login-cancel:hover, .btn-light.btn-login-cancel:focus, .btn-light:hover, .btn-light:focus {
+  background-image: linear-gradient(-180deg, #a7a7a7 0%, #888888 100%);
+  border: 0px solid #535353;
+  color: #fff !important;
+}
+
+.datepicker {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  z-index: 999 !important;
+}
+
+.datepicker-dropdown {
+  min-width: 15rem;
+}
+
+.datepicker td,
+.datepicker th {
+  font-size: 0.8rem;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.datepicker table tr td.active.active {
+  background: #01164f !important;
+}
+
+.datepicker-months,
+.datepicker-days,
+.datepicker-years {
+  min-width: 15rem;
+  max-width: 100%;
+}
+.datepicker-months table,
+.datepicker-days table,
+.datepicker-years table {
+  width: 98%;
+}
+
+.datepicker table tr td span.active.active {
+  background: #1b284c !important;
+}
+
+.datepicker-decades table,
+.datepicker-centuries table {
+  width: 100%;
+}
+
+.show-password-control {
+  position: relative !important;
+}
+.show-password-control a {
+  position: absolute;
+  top: 0.7rem !important;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  color: #000 !important;
+}
+
+.select2-container .select2-selection--multiple {
+  padding: 0.2rem 0.5rem;
+}
+
+.form-group .select2-container--default .select2-selection--single {
+  border-color: #a1a4a7 !important;
+  height: 40px !important;
+}
+
+.bottom-btn {
+  text-align: center;
+  border-top: 1px solid #363636;
+  padding-top: 1rem;
+}
+.bottom-btn .btn-secondary {
+  color: #fff !important;
+}
+
+.captcha {
+  border: none;
+  color: #0b065f !important;
+  height: 48px;
+  text-align: center;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.captcha-refresh {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.login_bg_img {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 12px;
+}
+
+.login-card {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 12px;
+}
+.login-card .logo {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.login-card .btn-showcase .btn {
+  line-height: 1;
+  padding: 10px 15px;
+  margin: 0;
+}
+.login-card .btn-showcase .btn + .btn {
+  margin-left: 5px;
+}
+.login-card .btn-showcase .btn svg {
+  height: 16px;
+  vertical-align: bottom;
+}
+.login-card .login-main {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+  margin: 0 auto;
+  background-color: #fff;
+}
+.login-card .login-main .theme-form h4 {
+  margin-bottom: 5px;
+  color: #374d7c;
+}
+.login-card .login-main .theme-form .unlock-1 {
+  width: 75%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-card .login-main .theme-form label {
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+.login-card .login-main .theme-form input {
+  transition: all 0.3s ease;
+  padding-left: 0.5rem !important;
+}
+.login-card .login-main .theme-form input::-webkit-input-placeholder {
+  color: #898989;
+}
+.login-card .login-main .theme-form input:hover, .login-card .login-main .theme-form input:focus {
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+}
+.login-card .login-main .theme-form p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #898989;
+}
+.login-card .login-main .theme-form p.register-complaint {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #898989;
+  text-align: center;
+}
+.login-card .login-main .theme-form .form-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+.login-card .login-main .theme-form .link {
+  position: relative;
+  top: -2px;
+  right: 0;
+  float: right;
+}
+.login-card .login-main .theme-form ul.login-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card .login-main .theme-form ul.login-social li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: rgba(204, 204, 204, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card .login-main .theme-form ul.login-social li:nth-child(n+2) {
+  margin-left: 15px;
+}
+.login-card .login-main .theme-form ul.login-social li:hover {
+  background-color: rgb(255, 112, 236) !important;
+}
+
+.btn-light {
+  color: #fff !important;
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+.btn-light:hover {
+  color: #fff !important;
+  background-color: lightgray;
+  border-color: #cdcdcd;
+}
+
+.fa-solid.fa-user .bottom-btn-section .btn-light {
+  color: #fff !important;
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(230, 230, 230);
+}
+
+.input-icon-group .input-icon {
+  border-right: none !important;
+  color: #000;
+}
+.input-icon-group:focus-within :is(.form-control, .input-icon) {
+  border-color: #374d7c;
+}
+
+.module-title-bg {
+  margin-top: 3.2rem !important;
+}/*# sourceMappingURL=login.css.map */

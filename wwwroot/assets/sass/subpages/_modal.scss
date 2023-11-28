@@ -1,0 +1,34 @@
+//BEGIN: Modal Style
+.modal {
+    .modal-dialog {
+        .modal-content {
+            border: 1px solid #edddbb;
+            .modal-header {
+                background-color: #edddbb;
+                color: $color-dark-cerlean;
+                padding: 0.5rem 1rem;
+                .modal-title{
+                    font-size:1.25rem;
+                    font-family: $font-gothic-bold;
+                }
+                .btn-close{
+                    margin-top: 0px;
+                }
+            }
+            .modal-body {
+            }
+            .modal-footer {
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+}
+body{
+    &.modal-open{
+        position: fixed;
+        width: 100%;
+    }
+}
+
+.modal-footer .btn{font-size: 0.75rem;}
+//END: Modal Style

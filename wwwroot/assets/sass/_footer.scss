@@ -1,0 +1,30 @@
+//BEGIN: Footer Style
+footer{    
+    display: none;
+    bottom: 0;
+    height: 50px;
+    width: 100%; 
+    position: absolute;
+    //padding: 0.8rem !important;
+    font-size: 0.8rem;
+    //max-height: 40px;
+    background-color: $color-ghost-white !important;    
+}
+.footer {
+    a {
+    color: #a17a23;
+    font-size: inherit;
+    &:hover{ color: #393431;}
+}
+}
+.footer{bottom: 0; margin-bottom: 0;}
+
+@media (max-width: 991px){
+.footer {    
+    font-size: 0.6rem;
+}
+.dataTables_wrapper .dataTables_paginate{ margin-top: -1.5rem;}
+}
+
+
+//END: Footer Style

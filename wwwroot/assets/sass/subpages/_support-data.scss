@@ -1,0 +1,32 @@
+//BEGIN: Support Data Styles
+.matrix{
+    border:1px solid $color-white;
+    cursor: pointer;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-very-ligh-grey;
+    h4,h5{
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+}
+//END: Support Data Styles
+
+//BEGIN: Report Setting Logo
+.selectlogo{
+    .avatar-upload{
+        max-width: 240px;
+        .avatar-preview-logo{
+            width: 240px;
+            height: 80px;            
+            img{
+                width: 240px;
+                height: 80px;
+            }
+        }
+    } 
+}
+//END: Report Setting Logo

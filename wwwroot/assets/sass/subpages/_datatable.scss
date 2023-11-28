@@ -1,0 +1,174 @@
+//BEGIN: Datatable styles
+
+.table{
+    &.table-bordered{
+        tr{
+            td,th{
+                padding: 0.5rem 0.5rem;
+                font-size: 0.875rem;
+                border-color: #edddbb;
+                border-width:1px 1px ;
+            }
+            &.table{
+                th{
+                    //background-color: $color-lavandar !important;d8d0e8
+                    background-color: #bda265  !important;
+                    vertical-align: middle;
+                    font-family: $font-segoe-bold;
+                    font-weight: 500;                    
+                }
+            }            
+        }
+                
+        thead,tfoot{
+            tr{
+                th{
+                    background-color: #a17a23 !important;
+                    vertical-align: middle;
+                    font-family: $font-segoe-bold;
+                    font-weight: 500;
+                    color: #fff;
+                }
+            }
+        }
+        tbody{
+            tr{
+                &:nth-child(2n + 2){
+                    background-color: #fff9e0;
+                    td{
+                        background-color: #fff9e0;
+                    }
+                }
+                &:nth-child(2n + 1){
+                    background-color: $color-white;
+                    td{
+                        --bs-table-accent-bg: $color-white;
+                    }
+                }
+                td{
+                    p{
+                        margin: 0;
+                    }
+                    select{
+                        max-height: 28px;
+                        padding: 0 0.5rem;
+                        font-size: 0.875rem;
+                    }
+                    input{
+                        max-height: 28px;
+                        font-size: 0.875rem;
+                    }                 
+                }
+                &.dt-hasChild{
+                    + tr{
+                        background-color: $color-white !important;
+                        > td{
+                            padding: 1rem 2rem;
+                        }
+                        td{
+                            background-color: $color-white !important;
+                        }
+                    }
+                }
+                &:hover{
+                    background-color: #fffced;
+                    --bs-table-hover-bg: #fffced;
+                }
+            }
+        }
+    }
+}
+.table-scrollable {
+    overflow-x: auto;
+}
+.table-scrollable.table-normal{    
+    tr{
+        td,th{
+            padding: 0.5rem 0.5rem;
+            font-size: 0.875rem;
+            color: #513d12;
+            //border-color: #c3b6dc;
+            p{
+                margin: 0;
+            }
+        }
+        &.tbl-thead{
+            th{
+                //background-color: $color-lavandar !important;d8d0e8
+                background-color:none !important;
+                vertical-align: middle;
+                color: #513d12;
+            }
+        }
+    }
+}
+table.dataTable {
+    border-top: 1px solid #eff5f5 !important;
+}
+.previous.disabled,.next.disabled{
+    opacity: 0.6;
+}
+.table-scrollable{
+    //overflow-x: auto;
+}
+.dataTables_wrapper .dataTables_paginate a.paginate_button {
+    background-color: #9b9b9b;
+    border-color: #9b9b9b;
+    margin: 0 3px 10px;
+    color: #fff !important;
+    border-radius: 3px;
+    padding: 0.375rem 0.65rem!important;
+    &:hover{
+    background: #9b9b9b !important;
+    border-color: #9b9b9b !important;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.dataTables_wrapper .dataTables_paginate a.paginate_button.current{
+    background-color: $color-tussock !important;
+    border-color: $color-tussock !important;
+    color: #fff !important;
+}
+table.dataTable thead>tr>th.sorting:before,table.dataTable thead>tr>th.sorting::after{
+    font-size: 1.5rem !important;
+}
+.grid-action{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    width: fit-content;
+    min-width: 6rem;
+    a,a:not([href]):not([tabindex]){
+        cursor: pointer;
+        color:$color-link;
+       &:disabled,.disabled{
+        cursor: not-allowed !important;
+    }
+        i{
+            font-size: 1rem !important;
+            font-weight: 900;
+        }
+    }
+}
+// .dataTables_wrapper .dataTables_filter{
+//     margin-bottom: 0.5rem;
+// }
+.disabled{
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+
+.table td i{color: #393431;}
+
+.fa.fa-adjust.conduct-audit-icon{color: #393431 !important;}
+.fa.fa-adjust.regular-audit-icon{color: #393431 !important;}
+.fa.fa-adjust.evidence-audit-icon{color: #938c8c !important;}
+.fa.fa-adjust.followup-audit-icon{color: #837d7d !important;}
+
+.text-info {
+    color: #185292 !important;
+}
+//END: Datatable STyles
+

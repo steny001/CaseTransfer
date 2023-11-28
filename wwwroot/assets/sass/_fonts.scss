@@ -1,0 +1,67 @@
+// BEGIN: Fonts
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// $font-roboto: "Roboto", sans-serif;
+// $font-open-sans: "Open Sans", sans-serif;
+// $font-montserrat: "Montserrat", sans-serif;
+// @import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+// @import url(https://fonts.googleapis.com/css?family=Raleway);
+// @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+// @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+$font-gothic: "Century Gothic Regular", sans-serif;
+$font-gothic-italic: "Century Gothic Regular Italic", sans-serif;
+$font-gothic-bold: "Century Gothic Bold", sans-serif;
+$font-gothic-bold-italic: "Century Gothic Bold Italic", sans-serif;
+
+$font-segoe-regular:'Segoe UI Regular',sans-serif;
+$font-segoe-bold:'Segoe UI Bold',sans-serif;
+// END: Fonts
+//BEGIN: Century Gothic Font
+@font-face {
+    font-family: Century Gothic Regular;
+    src: url(../fonts/century-gothic/Century-Gothic.otf);
+}
+@font-face {
+    font-family: Century Gothic Italic;
+    src: url(../fonts/century-gothic/Century-Gothic-Italic.otf);
+}
+@font-face {
+    font-family: Century Gothic Bold;
+    src: url(../fonts/century-gothic/Century-Gothic-Bold.otf);
+}
+@font-face {
+    font-family: Century Gothic Bold Italic;
+    src: url(../fonts/century-gothic/Century-Gothic-Bold-Italic.otf);
+}
+//END:Centry Gothic Font
+//BEGIN: SageUI Font
+@font-face {
+    font-family: "Segoe UI Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Regular"), url("../fonts/segoe-ui/Segoe UI.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Italic"), url("../fonts/segoe-ui/Segoe UI Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Bold"), url("../fonts/segoe-ui/Segoe UI Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Bold Italic"), url("../fonts/segoe-ui/Segoe UI Bold Italic.woff") format("woff");
+}
+//END: SageUI Font

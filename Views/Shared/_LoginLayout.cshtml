@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CaseTransfer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CaseTransfer.styles.css" asp-append-version="true" />
+    <!-- Start CaseTransfer Plugins-->
+    <link href="~/css/1style.css" rel="stylesheet" />
+    <link href="~/css/4blog.css" rel="stylesheet" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/green.css" title="green" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/blue.css" title="blue" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/orange.css" title="orange" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/lilac.css" title="lilac" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/yellow.css" title="yellow" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/teal.css" title="teal" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/pink.css" title="pink" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/red.css" title="red" />
+    <link rel="alternate stylesheet" type="text/css" href="~/skins/khaki.css" title="khaki" />
+    <!-- End -->
+    <script src="~/assets/js/jquery.min.js"></script>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        h5 {
+            font-weight: bold;
+        }
+
+        body {
+            padding-bottom: 0px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DEMO PANEL
+            ================================================== -->
+    <button id="btnStyle" name="btnStyle" type="button" class="optionsbutton">
+        <img src="~/images/options.png" alt="Theme" />@*<img src='<%=ResolveUrl("~/App_Themes/default/images/options.png") %>' alt="Theme" />*@
+    </button>
+    <div id="skinoptions" style="position: fixed; top: 289px; right: 0px; z-index: 9999;
+		display: none;">
+        <a href="#" onclick="setActiveStyleSheet('green'); return false;">
+            <div class="optionscolor" style="background-color: #8ea145;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('blue'); return false;">
+            <div class="optionscolor" style="background-color: #2284a1;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('yellow'); return false;">
+            <div class="optionscolor" style="background-color: #e0aa32;">
+            </div>
+        </a>
+        <div class="clear">
+        </div>
+        <a href="#" onclick="setActiveStyleSheet('lilac'); return false;">
+            <div class="optionscolor" style="background-color: #9e7ead;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('orange'); return false;">
+            <div class="optionscolor" style="background-color: #da6f29;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('pink'); return false;">
+            <div class="optionscolor" style="background-color: #8a4466;">
+            </div>
+        </a>
+        <div class="clear">
+        </div>
+        <a href="#" onclick="setActiveStyleSheet('teal'); return false;">
+            <div class="optionscolor" style="background-color: #33877d;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('red'); return false;">
+            <div class="optionscolor" style="background-color: #f2615c;">
+            </div>
+        </a><a href="#" onclick="setActiveStyleSheet('khaki'); return false;">
+            <div class="optionscolor" style="background-color: #a0a774;">
+            </div>
+        </a>
+    </div>
+
+
+    <!-- HIDDEN PANEL
+    ================================================== -->
+    <div id="panel1" clientidmode="Static">
+        <p class="slide"></p>
+    </div>
+
+    <!-- HEADER
+    ================================================== -->
+    <div class="row">
+        <div class="col-md-4 imgresponsive center">
+            <img src="~/ctimages/dfwac.gif" alt="dfwac logo" class="img-fluid" />
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ml-auto text-center">
+                    <div class="form-group">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label for="rdoLanguage" class="font-weight-bold m-3">Select Language:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input mt-3" type="radio" name="rdoLanguage" id="rdoLanguage1" value="1" checked>
+                                <label class="form-check-label mt-3" for="rdoLanguage1">Arabic</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input mt-3" type="radio" name="rdoLanguage" id="rdoLanguage2" value="2">
+                                <label class="form-check-label mt-3" for="rdoLanguage2">English</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- SUBHEADER
+    ================================================== -->
+    <div id="subheader">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center">
+                    “A place without women is a place without spirit” - Mohammed bin Rashid Al Maktoum
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="small">© DFWAC 2015. All Rights Reserved. | Web site powered by Management Concept Group</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="small floatright">
+                        Tel: 04-6060300 Fax: 04-2871177, Email: info@dfwac.ae,
+                        P.O. Box 97727 Dubai, United Arab Emirates</br> Helpline: 800111 SMS: 5111
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPTS -->
+    <!-- Javascript files placed here for faster loading -->
+    <script src="~/scripts/foundation.js"></script>
+    <script src="~/scripts/foundation.min.js"></script>
+    <script src="~/scripts/scrolltotop.js"></script>
+    <script src="~/scripts/superfish.js"></script>
+    <script src="~/scripts/responsivemenu.js"></script>
+    <script src="~/scripts/casetransfer_validation.js"></script>
+    <!-- End -->
+@*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)*@
+
+    <!-- BEGIN: Toaster Refrences -->
+    <a href="~/toster/toastr.css.map"></a>
+    <link href="~/toster/toastr.css" rel="stylesheet" />
+    <script src="~/assets/plugins/toastr/toastr.min.js" asp-append-version="true"></script>
+    <!-- END: Toaster Refrences -->
+    <!-- BEGIN: Custom APS theme Script -->
+    <script src="~/js/aps.theme.scripts.js" asp-append-version="true"></script>
+    <!-- END: Custom APS theme Script -->
+    <!-- BEGIN: MessageCatalog Script -->
+    <script src="~/js/messagecatalog.js"></script>
+    <!-- END: MessageCatalog  Script -->
+    <!-- END: Session Value Expired or Not Script -->
+   
+</body>
+</html>

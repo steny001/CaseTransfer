@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "_Layout";
+}
+
+@model CaseTransfer.Models.CaseTransferModel
+
+<table class="table table-bordered table-striped" id='tbllist'>
+    <thead id="subheader" class="text-white">
+        <tr>
+            <td>AgencyName</td>
+            <td>ResponseBy</td>
+            <td>ClientName</td>
+            <td>CaseNumber</td>
+            <td>Gender</td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<partial name="_DataTableScriptPartial" />
+<script src="~/assets/js/aps.theme.scripts.js" asp-append-version="true"></script>
+@*<style type="text/css">
+    #tbllist_filter {
+        margin-bottom: 1%;
+    }
+</style>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        debugger
+        LoadCaseDetails();
+
+        //$('input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],textarea,input[type="select"]').addClass('langDirectionltr');
+    }
+    );
+
+    //function FunEdit(element) {
+    //    var code = $(element).closest('tr').find('input[type=hidden]').val();
+    //    window.location.href = "/employee/Edit?code=" + code;
+    //}
+
+    //function FunRemove(element) {
+    //    var code = $(element).closest('tr').find('input[type=hidden]').val();
+    //    if (confirm("do you want to remove?")) {
+    //        $.ajax({
+    //            type: "POST",
+    //            url: "/Employee/Remove",
+    //            data: { code: code },
+    //            success: function (data) {
+    //                if (data == 'pass') {
+    //                    alert('Removed successfully.');
+    //                    window.location.reload();
+    //                } else {
+    //                    alert("Failure due to :" + data)
+    //                }
+    //            },
+    //            failure: function (err) {
+
+    //            }
+    //        });
+    //    }
+    //    //window.location.href = "/employee/Edit?code="+code;
+    //}
+
+    function LoadCaseDetails() {
+        debugger
+        var CaseDetails = [];
+        var Caseurl = "/Dashboard/GetCaseDetailsByAdmin"
+        $.ajax({
+            type: "POST",
+            url: Caseurl,
+            async: false,
+            success: function (data) {
+
+                if (data.statusCode == 200) {
+                    if (data.resultData?.caseDetailsList?.length > 0) {
+                        for (i = 0; i < data.resultData.caseDetailsList.length; i++) {
+                            CaseDetails += '<tr>'
+
+                            CaseDetails += '    <td>' + data.resultData.caseDetailsList[i].agency + '</td>'
+                            CaseDetails += '    <td>' + data.resultData.caseDetailsList[i].responseBy + '</td>'
+                            CaseDetails += '    <td>' + data.resultData.caseDetailsList[i].clientName + '</td>'
+                            CaseDetails += '    <td>' + data.resultData.caseDetailsList[i].caseNumber + '</td>'
+                            CaseDetails += '    <td>' + data.resultData.caseDetailsList[i].gender + '</td>  '
+                            CaseDetails += '</tr>'
+                        }
+                    }
+                    $('#tbllist').find('tbody').empty();
+                    $('#tbllist').find('tbody').append(CaseDetails);
+                }
+                else {
+                    CaseDetails += '<tr ><td colspan=9">' + ReportSettings.resultData.StatusMessage + '</td></tr>';
+                    $('#tbllist').find('tbody').empty();
+                    $('#tbllist').find('tbody').append(CaseDetails);
+                }
+                ApplyCommonGridStyle();
+            }
+        });
+
+    }
+
+</script>

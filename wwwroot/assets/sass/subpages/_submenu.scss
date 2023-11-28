@@ -1,0 +1,106 @@
+//BEGIN: Submenu Style
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+
+$menu-bg: #ed128f;
+$menu-font-color: #ffffff;
+$secondory-color: #f1d71b;
+$menu-hover-color: #0054ff;
+.my-navnar {
+    @media (min-width:1200px) and (max-width:1400px){
+        max-width: 1150px;
+    }
+    @media (min-width:1400px){
+        max-width: 1280px;
+    }
+    .drop-menu-icon {
+        position: relative;
+        left: 0;
+        opacity: 1;
+        transition: all 0.3s ease-in 0s;
+        color: $menu-font-color;
+    }
+
+    .drop-menu-icon.hidden {
+        width: 20px;
+        padding: 0;
+        overflow: hidden;
+        align-self: center;
+        visibility: hidden;
+        left: 15px;
+        opacity: 0;
+    }
+
+    ul.nav-items {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        list-style-type: none;
+        margin: 0;
+        -webkit-padding-start: 0;
+
+        li {
+            flex: none;
+            position: relative;
+            transition: all 0.4s;
+        }
+    }
+
+    ul.dropdown-menu.hidden {
+        visibility: hidden;
+        opacity: 0;
+        top: 80%;
+    }
+
+    ul.dropdown-menu {
+        position: absolute;
+        background: #ffffff;
+        right: -23px;
+        top: 90%;
+        transition: all 0.3s ease-in 0s;
+        min-width: 150px;
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
+        margin: 0;
+        padding: 0;
+        display: block;
+
+        &:before {
+            content: "";
+            border-bottom: 10px solid #ffffff;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            top: -9px;
+            right: 10px;
+        }
+
+        li {
+            padding: 5px 20px;
+            padding-right: 1rem;
+            font-size: 0.95em;
+            transition: all 0.5s;
+            list-style-type: none;
+
+            &:hover {
+                background: lighten($menu-bg, 45%);
+
+                a {
+                    color: $menu-hover-color;
+                }
+            }
+
+            &:first-child {
+                margin-top: 10px;
+            }
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: $menu-bg;
+            }
+        }
+    }
+}
+//END: Submenu Style

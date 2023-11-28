@@ -1,0 +1,33 @@
+
+
+.accordion{
+	.accordion-item {
+		margin-bottom: 1rem;
+		.accordion-header{
+			color: #212529;	
+			a{
+				padding: 0.5rem;
+			}	
+		.accordion-button {
+			cursor: pointer;
+			&:not(.collapsed) {
+				//background-color: $color-light-sky-blue;
+				//background-color: #ccd7e2;
+				background-color: #b7d8e2;
+				color: #212529;
+			}
+			&.collapsed{
+				border-top: 1px solid #9ac8d6;
+				background-color: #9ac8d6;
+			}
+		}
+	}
+	.accordion-collapse{
+		&.show{
+			.accordion-body{
+
+			}
+		}
+	}
+	}
+}

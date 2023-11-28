@@ -1,0 +1,148 @@
+//BEGIN: General Module Styles
+$color-planned:#828286;
+$color-inprogress:#ffff00;
+$color-completed:#339933;
+$color-suspended:#ff9900;
+$color-cancelled:#ff0000;
+//BEGIN: Water Tank Cleaning
+.wtc-img-upload {
+    .img-upload-preview {
+        .avatar-preview-sign {
+            height: 16rem;
+            padding: 1rem;
+            img{
+                border-radius: 0;
+            }
+            div{
+                border-radius: initial;
+            }
+        }
+    }
+}
+.certificate-img{
+    .avatar-preview-logo{
+        width: 100%;
+        height: 240px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    i{
+        font-size: 10rem;
+    }
+        img{
+            max-width:100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            //object-fit: cover;
+        }     
+    }
+    .avatar-edit{
+        label{
+            cursor: pointer;
+            font-weight: normal;
+            transition: all .2s ease-in-out;
+            border-radius: initial;
+            width: 100%;
+        }
+    }
+}
+.has-error{
+    .certificate-img{        
+        .avatar-edit{
+            display: flex;
+            flex-direction: column;
+            .help-block-error{
+                order: 3;
+            }
+        }
+    }
+}
+#frmAddWaterTankCleaning,#frmAddMasterThermometer,#frmAddLuxMeterCalibration{
+    .avatar-preview-logo{
+     height: 315px;
+    }
+}
+#frmWaterTankCleaningImageDetails{
+    .avatar-preview-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        i{
+            font-size: 10rem;
+        }
+    }
+    .avatar-preview-sign{
+        width: 100%;
+        border-radius: initial;
+        i{
+            font-size: 10rem;
+            color: #edddbb;
+        }
+    }
+}
+//END: Water Tank Cleaning
+
+//BEGIN: Preventive Plan Schedule Style
+#frmPreventativeplanschedule{
+    .row{
+        align-items: center;
+    }
+}
+.pps-status-indicator-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 5rem;
+    gap: 1rem;
+    li{
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        span{
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            &.planned{
+                background-color:$color-planned ;
+            }
+            &.inprogress{
+                background-color: $color-inprogress;
+            }
+            &.completed{
+                background-color: $color-completed;
+            }
+            &.suspended{
+                background-color: $color-suspended;
+            }
+            &.cancelled{
+                background-color: $color-cancelled;
+            }
+        }
+    }
+}
+//END: Preventive Plan Schedule Style
+
+//BEGIN: Fire Safety Style
+#divAreasCheckList{
+    max-height: 14rem;
+    overflow-y: auto;
+}
+//END: Fire Saftey Style
+//END: General Module Styles
+//
+@media (min-width:576px) and (max-width:767px){
+    .nav-tabs .nav-link{
+        font-size: 0.5rem;
+    }
+}
+@media (min-width:320px) and (max-width:575px){
+    .nav-tabs .nav-link{
+        font-size: 0.7rem;
+    }
+}

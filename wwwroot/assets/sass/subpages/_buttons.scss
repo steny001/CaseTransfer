@@ -1,0 +1,219 @@
+//BEGIN: Button Styles
+.btn{
+  i{
+    margin-right: 0.3rem;
+  }
+}
+.bottom-btn-section,.modal-footer{
+    .btn-primary{
+      //background-image: linear-gradient(-180deg, #5d34af  0%, #1b284c 100%);
+        border-color: #a17a23;
+        background-color: #a17a23;
+        border-radius: 25px;        
+        &:hover,&:focus{
+          border-color: #8a671b;
+          background-color: #8a671b;
+          opacity: 0.8;
+        }
+        &.btn:first-child:active{
+          background-color: #8a671b;    
+          border: 1px solid #8a671b;
+        }
+    }
+    .btn-secondary{
+      background: #c0c0e7;
+      //background-image: linear-gradient(-180deg, #6c757d  0%, #515557 100%);
+        //background-color: #6c757d;
+        border-color: #c0c0e7;
+        &:hover,&:focus{
+          //background-image: linear-gradient(-180deg, #8a939b  0%, #797d7f 100%);
+          background: #d2d7de;
+            border-color: #d2d7de;
+        }
+    }
+}
+.btn {
+  font-size: 0.875rem;
+  border-radius: 25px;
+}
+.add-btn-section {
+    text-align: end;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0rem;
+    background-color: transparent;
+  
+    .btn {
+      font-size: 0.875rem;
+      border-radius: 25px;      
+    }
+    // .btn-info {
+    //   //background-color: $color-cyan-blue !important;
+    //   //border-color: $color-cyan-blue !important;
+    //   // background-color: #36A9AE;
+    //   // background-image: linear-gradient(#37ADB2, #329CA0);
+    //   //background: rgb(25,86,154);
+    //   //background: linear-gradient(180deg, rgba(25,86,154,1) 0%, rgba(3,153,156,1) 100%);
+    //   background-color: #2c8cf4;
+    //   border: 1px solid #2c8cf4;
+    //   box-shadow: none !important;
+    //   color: $color-white !important;
+    //   &:hover,&:focus {
+    //   background-color: #1f7bde;
+    //   //background-image: linear-gradient(#32a2a6, #2d9194);
+    //   border: 1px solid #1f7bde;
+    //   }
+    // }
+    .btn-export,
+    .btn-white {
+      background-color: $color-white !important;
+      color: $color-cyan-blue !important;
+      border-color: $color-white !important ;
+      &:hover,&:focus {
+        color: $color-light-cyan-blue !important;
+        border-color: $color-white !important ;
+      }
+      i {
+        margin-right: 0.3rem;
+      }
+    }
+  }
+  .btn-info {  
+  background-color: #393431;
+  border: 1px solid #393431;  
+  border-radius: 25px;
+    box-shadow: none !important;
+    color: $color-white !important;
+    &:hover,&:focuS,&:active {
+    background-color: #4e4845;    
+    border: 1px solid #4e4845;
+    }
+    &.btn:first-child:active{
+      background-color: #4e4845;    
+      border: 1px solid #4e4845;
+    }
+    &:not(.btn-check)+.btn:active{ background-color: #f00;}
+  }
+
+  .btn-success {  
+  background-color: #17a2b8;  
+  border: 1px solid #17a2b8;
+  border-radius: 25px;
+    box-shadow: none !important;
+    color: $color-white !important;
+    &:hover,&:focus {
+    background-color: #0f90a5;    
+    border: 1px solid #0f90a5;
+    }
+    
+  }
+
+  .jquery-msgbox-buttons{
+    button{
+      &:hover,&:focus {
+        background-color: $color-light-cyan-blue !important;
+        color: $color-white !important;
+      }
+    }
+  }
+//END: Button Styles
+
+/* ani btn CSS */
+
+.btn-add-new {
+	background-color: #36A9AE;
+  background-image: linear-gradient(#37ADB2, #329CA0);
+  border: 1px solid #2A8387;
+	border-radius: 25px;
+	&:hover {
+	background-color: #3cafb5;
+  background-image: linear-gradient(#41b9bd, #3aa8ab);
+  border: 1px solid #2A8387;
+	}
+}
+
+ .btn-save {
+  background-image: linear-gradient(-180deg, #5d34af  0%, #1b284c 100%);
+	border-radius: 25px;
+	&:hover {
+		background-image: linear-gradient(-180deg, #744ac8 0%, #283760 100%);
+	}
+ }
+
+ .btn-light {
+	//background-image: linear-gradient(-180deg, #c2c2c2  0%, #949494 100%);
+  background-color: #e8eef5;	
+	border: 1px solid #e8eef5;
+  border-radius: 25px;;
+	color: #333 !important;
+	&:hover {
+    background: #d2d7de;
+		//background-image: linear-gradient(-180deg, #a7a7a7 0%, #888888 100%);
+		border: 1px solid #f1f1f1;
+		color: #333;
+	}	
+}
+ 
+.btn-danger {
+	//background-image: linear-gradient(-180deg, #dc3545  0%, #a20101 100%);	
+  background: #d9534f;
+	border: 1px solid #d9534f;
+  border-radius: 25px;;
+	color: #fff;
+  margin-bottom: 1rem;
+	&:hover {
+		//background-image: linear-gradient(-180deg, #ea0000 0%, #c30000 100%);
+    background: #c84743;
+		border: 1px solid #c84743;
+		color: #fff;
+	}	
+}
+ 
+
+// .btn-cancel {
+// 	background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+// 	border-radius: 25px;
+// 	&:hover {
+// 		background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+// 	}
+// }
+
+.btn-disabled{
+  cursor: not-allowed;
+  a,button{
+    pointer-events: none;
+  }
+}
+
+.btn-nolable{ margin-top: 1.6rem; margin-bottom: 1.5rem;}
+
+@media (max-width: 320px) { 
+  .bottom-btn-section .btn{ margin-bottom: 1rem;}
+  .db-comp-tab {
+    border: none;
+    font-size: 0.8rem;
+}
+}
+@media only screen and (max-width: 480px) {
+  .bottom-btn-section .btn{ margin-bottom: 1rem;}
+  .db-comp-tab {
+    border: none;
+    font-size: 0.8rem;
+}
+.middle-btn-section a,.middle-btn-section .btn-info{ font-size: 0.5rem;}
+.add-btn-section a{ margin-bottom: 1rem;}
+.audit-schedule-status-list{justify-content: normal;}
+.fc .fc-popover{ margin-left: -2rem;}
+}
+@media only screen and (min-width: 768px) 
+    and (max-width: 1024px) {
+      .owl-nav .owl-prev,.owl-nav .owl-next{top: -1.9rem;}
+
+}
+
+@media only screen and (min-width: 768px) 
+and (max-width: 1024px) {
+.dataTables_wrapper .dataTables_paginate{ margin-top: -1.5rem;} 
+
+}
+

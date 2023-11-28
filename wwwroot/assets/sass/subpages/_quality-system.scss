@@ -1,0 +1,43 @@
+// BEGIN: Quality System page style
+#hidden {
+    display: none;
+  }
+  .nestedtbl-arrow{
+    display: flex;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #a17a23 !important;
+    color:$color-white;
+    i{
+        font-size: 0.675rem !important;
+        color: $color-white !important;
+    }
+  }
+// END: Quality System page style
+
+// BEGIN: Create Policy
+.versionctrl{
+  display: flex;
+  gap:0.5rem;
+}
+// END: Create Policy
+
+//BEGIN: Create SOP Style
+.file-btn-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  label{
+    margin: 0;
+  }
+}
+//END: Create SOP Style
+.version-text{
+  font-size: 1.2rem;
+  text-align: center;
+}
